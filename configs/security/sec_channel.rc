@@ -1,0 +1,3 @@
+# Sheng is Wi-Fi only. Keep the TrustZone channel; no modem QMI service exists.
+tz_enable=1
+modem_enable=0

@@ -1,0 +1,356 @@
+{
+  "captured_at_utc": "2026-10-19T09:32:11.546237+00:00",
+  "purpose": "Complete sanitized Qualcomm kalama userspace UAPI set exported by standard device_kernel_headers; independent of stock kernel image/module selection",
+  "source_kind": "Existing Qualcomm kalama platform headers, not extracted from Sheng firmware",
+  "files": [
+    {
+      "file": "drm/i810_drm.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/drm/i810_drm.h",
+      "bytes": 10061,
+      "sha256": "3b46b5c9e943420bcdf2683d65f6feec81555bc89a1a710d1bf6dc527edab3c2"
+    },
+    {
+      "file": "drm/mga_drm.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/drm/mga_drm.h",
+      "bytes": 13010,
+      "sha256": "20be6c1c32101d66c08a5741dfd7ea834221199a5921ac0e4b4698c432dafc0f"
+    },
+    {
+      "file": "drm/r128_drm.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/drm/r128_drm.h",
+      "bytes": 10000,
+      "sha256": "5ee8a4d8dc2f8529bc3082ae99e19b836b9241d3ec8380d6e544165c2468ce2c"
+    },
+    {
+      "file": "drm/savage_drm.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/drm/savage_drm.h",
+      "bytes": 7170,
+      "sha256": "09f5f47769f6365b2e321ece9e83ce1e4d6aef6ae727dacd33d02d2fd64cb26e"
+    },
+    {
+      "file": "drm/sis_drm.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/drm/sis_drm.h",
+      "bytes": 2637,
+      "sha256": "adcefd79c9a2bc66512df3444e82a81e3193c764cc9c310287e7cb7b8ef51848"
+    },
+    {
+      "file": "drm/via_drm.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/drm/via_drm.h",
+      "bytes": 8345,
+      "sha256": "7a6408cb3c55b27457830219a5903c6232082fcbad85a195acceb2c9a2b76184"
+    },
+    {
+      "file": "linux/android_fuse.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/android_fuse.h",
+      "bytes": 2146,
+      "sha256": "e772d39e3a5bd4fcc79cdb07608a19a401df73bf09a500b19b9768ddf0235639"
+    },
+    {
+      "file": "linux/bpfilter.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/bpfilter.h",
+      "bytes": 465,
+      "sha256": "2c8eac3ebb79bfc343db26d2faa1e22c29c29e213b921a4452a1de702b0f64c6"
+    },
+    {
+      "file": "linux/cm4000_cs.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/cm4000_cs.h",
+      "bytes": 1806,
+      "sha256": "f3f1b187c8ea73d262dc849304fa6f90a1b9a7367bedd06d4377e67ea8974bbf"
+    },
+    {
+      "file": "linux/dlm_netlink.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/dlm_netlink.h",
+      "bytes": 1159,
+      "sha256": "ba02e8b66046616391ad65700dc6d266db6042a22a2f0ca9288015cb89222668"
+    },
+    {
+      "file": "linux/eavb_shared.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/eavb_shared.h",
+      "bytes": 9697,
+      "sha256": "9a1e862db061e3cef6d577dd0c9e7864d4b4721b5c031eef1a838e4dcb1c18f8"
+    },
+    {
+      "file": "linux/esoc_ctrl.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/esoc_ctrl.h",
+      "bytes": 2246,
+      "sha256": "62ea3b5e0ad21592eaf6de83a22655229713c280eef4ced9277b6d2a224a4632"
+    },
+    {
+      "file": "linux/gh_virtio_backend.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/gh_virtio_backend.h",
+      "bytes": 2739,
+      "sha256": "a8fd7c595df76b946697442db4359e8653912b682494ed54e683a0aeb8c09d67"
+    },
+    {
+      "file": "linux/gunyah.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/gunyah.h",
+      "bytes": 10223,
+      "sha256": "43ba896a950f382faab0c2173dfe4800863d3fcc822f09c7e1042d9ba58c04b8"
+    },
+    {
+      "file": "linux/hab_ioctl.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/hab_ioctl.h",
+      "bytes": 1890,
+      "sha256": "4e73dcbe1236a16ed8bf56716d62536fd1af894791f74ffff7f2c1b704ca9b21"
+    },
+    {
+      "file": "linux/habmmid.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/habmmid.h",
+      "bytes": 1816,
+      "sha256": "c8f93c0a985de41e2ad6d6fa5f7bcd0b66dcfc4e123a5f4d01598c37ab3bb23a"
+    },
+    {
+      "file": "linux/hgsl.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/hgsl.h",
+      "bytes": 14297,
+      "sha256": "637420ab17f61301d6044d709894832bd0c36dd6f1d49e5eadd236d0c5c1c673"
+    },
+    {
+      "file": "linux/if_cablemodem.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/if_cablemodem.h",
+      "bytes": 986,
+      "sha256": "c80066cfceab0c6bdb72725acc726dc10fb90cbdf5751043f6552ab13dfba5a8"
+    },
+    {
+      "file": "linux/iommu.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/iommu.h",
+      "bytes": 12016,
+      "sha256": "abef0337585d1853254a9b7c193f0459b6389081ae56855f446d323ab58d856d"
+    },
+    {
+      "file": "linux/ion.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/ion.h",
+      "bytes": 3963,
+      "sha256": "933433472d60b1e9b78b122645d8e7de7577ddbac6c4a84d358dabc8ad6525de"
+    },
+    {
+      "file": "linux/ipa_qmi_service_v01.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/ipa_qmi_service_v01.h",
+      "bytes": 106555,
+      "sha256": "696fae7c835da4246bbf95d84c4d06f90c4a8cd9074483123cb391830767300f"
+    },
+    {
+      "file": "linux/mem-buf.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/mem-buf.h",
+      "bytes": 8131,
+      "sha256": "debf574c757ce90e24d8f0b7630ef33490820e22a491e3d8d8de8dfc8eeabc20"
+    },
+    {
+      "file": "linux/meye.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/meye.h",
+      "bytes": 2529,
+      "sha256": "1640ab3ee7781d5f755e4629d4d2750b76751c8a3862806221155f76aa75e294"
+    },
+    {
+      "file": "linux/mhi.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/mhi.h",
+      "bytes": 1012,
+      "sha256": "69805412ffd24ac573933af764aa4d95d423aa7c9eb9d6d7e0d9c4530e87f724"
+    },
+    {
+      "file": "linux/msm_dsps.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_dsps.h",
+      "bytes": 565,
+      "sha256": "5b142f071c68f7ab9a7ad53dbf4d93f404422e4523c6900d295d64bdc195f337"
+    },
+    {
+      "file": "linux/msm_eth.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_eth.h",
+      "bytes": 1271,
+      "sha256": "f528e3c1f9a565d73418a400b67c00d9f27ee44ce32bdcd3300e19286011f20a"
+    },
+    {
+      "file": "linux/msm_geni_serial.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_geni_serial.h",
+      "bytes": 635,
+      "sha256": "ffb066c9eeafdc89c3f972cb1b7a9ca0f513504a100305a3aa353f4a9cd1a18e"
+    },
+    {
+      "file": "linux/msm_ion.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_ion.h",
+      "bytes": 2568,
+      "sha256": "019750b6d29633f94b869ecc6994c97f537e5fd5e3d710ae749f82b28c600aac"
+    },
+    {
+      "file": "linux/msm_ion_ids.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_ion_ids.h",
+      "bytes": 1306,
+      "sha256": "d5f7f5c3b6676bc6fce031e359517a546f628161d55664cb9f7ede703a30b899"
+    },
+    {
+      "file": "linux/msm_ipa.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_ipa.h",
+      "bytes": 121695,
+      "sha256": "548c310b25a42fc3a82752258db962c455d0865f5efb74d197e83d30a4e0a6e8"
+    },
+    {
+      "file": "linux/msm_npu.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_npu.h",
+      "bytes": 7790,
+      "sha256": "cb47e7f527ff685982b0a982324cc17a2e96fbfa62d9bd539fea106e831735e5"
+    },
+    {
+      "file": "linux/msm_rmnet.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_rmnet.h",
+      "bytes": 13209,
+      "sha256": "4148ab6583c96542d02bd2b269271f665635408c453aa76fa4f397f29f643e6e"
+    },
+    {
+      "file": "linux/msm_sysstats.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/msm_sysstats.h",
+      "bytes": 2481,
+      "sha256": "67cde3280bc42e16b4bbc0a01dbffb0249a827c0edc9b193065872cc21e54287"
+    },
+    {
+      "file": "linux/nfsd/nfsfh.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/nfsd/nfsfh.h",
+      "bytes": 3726,
+      "sha256": "2ad0b01cdeb40bccbb27616cfb376b0a68b9fc4f5b066073639c92eb50121296"
+    },
+    {
+      "file": "linux/power_state.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/power_state.h",
+      "bytes": 2042,
+      "sha256": "066ed98721162006c782606cbf2a0e832ebace2a91f92c1cf5182c791634cadd"
+    },
+    {
+      "file": "linux/qbg-profile.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qbg-profile.h",
+      "bytes": 1474,
+      "sha256": "e01eddf7143d4eb24711d6757d10277b2945aefab7e18f908fd316bebab4930c"
+    },
+    {
+      "file": "linux/qbg.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qbg.h",
+      "bytes": 4218,
+      "sha256": "d43d41dac5c2a4346430e1cc71a59f5db4629f42ed78d827d14f5b0367bdb155"
+    },
+    {
+      "file": "linux/qbt_handler.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qbt_handler.h",
+      "bytes": 4023,
+      "sha256": "4194ed083baaf7bc879355825cf2604f6779d16ae39fecf1823dd37d1df14640"
+    },
+    {
+      "file": "linux/qg-profile.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qg-profile.h",
+      "bytes": 1847,
+      "sha256": "0bc5290783c5a431f0a475bcdb6b67b99f00c721c2286e7394754424afd4eae1"
+    },
+    {
+      "file": "linux/qg.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qg.h",
+      "bytes": 1448,
+      "sha256": "e90faf3e2f0ee131e90f9b88f645d044f3ac989560e089c59b61652d1b39d8ff"
+    },
+    {
+      "file": "linux/qseecom.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qseecom.h",
+      "bytes": 11541,
+      "sha256": "528c429c54aa14fdcf88096ede090b020626444751dcb94a8c0d8c644454cadb"
+    },
+    {
+      "file": "linux/qti_virtio_mem.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/qti_virtio_mem.h",
+      "bytes": 671,
+      "sha256": "1dba8de80928c33fd35cd7b8030434720f3d9cc4777ad7ce11736433b3a5d8b2"
+    },
+    {
+      "file": "linux/reiserfs_fs.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/reiserfs_fs.h",
+      "bytes": 775,
+      "sha256": "d19744fda6154fcab8dfcd268f36275d417dc61863001ccc50028511db84e4b8"
+    },
+    {
+      "file": "linux/reiserfs_xattr.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/reiserfs_xattr.h",
+      "bytes": 533,
+      "sha256": "d497abb987bb8b2e61aab9de94d407ab660d6fe1ee0e5c1cbdbabeb2a4c19f1e"
+    },
+    {
+      "file": "linux/rmnet_ipa_fd_ioctl.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/rmnet_ipa_fd_ioctl.h",
+      "bytes": 10095,
+      "sha256": "3ab4b1302d4f075af3aca58c92bc73720d776af06fdc4a83c21fdcf8d124bd92"
+    },
+    {
+      "file": "linux/sail_mbox.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/sail_mbox.h",
+      "bytes": 3479,
+      "sha256": "6d6ef3e7671e97742424586cff494b10c642d1efe407817382381a62c35ebd02"
+    },
+    {
+      "file": "linux/slatecom_interface.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/slatecom_interface.h",
+      "bytes": 2849,
+      "sha256": "f4199341616b353c13a17fa7935d0d85a3c4827920c1b34f6d38113d4f345f23"
+    },
+    {
+      "file": "linux/spcom.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/spcom.h",
+      "bytes": 10392,
+      "sha256": "8435ab0bea9d3e47d8c53d7768c081f3577f65ef99c90dffa3f18ae463ac415f"
+    },
+    {
+      "file": "linux/spss_utils.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/spss_utils.h",
+      "bytes": 3023,
+      "sha256": "9c903caf3655136e3f2e8a94f089114c45c56e0bd3715ed5eefac0ece338c11d"
+    },
+    {
+      "file": "linux/tc_act/tc_ipt.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/tc_act/tc_ipt.h",
+      "bytes": 415,
+      "sha256": "9e04a25903d5909aeb1cfbcca1c4b08be0f22f4faf1b30a70bbcaf161bf45e42"
+    },
+    {
+      "file": "linux/usb/f_accessory.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/usb/f_accessory.h",
+      "bytes": 5278,
+      "sha256": "ae4f6ad8e84b272ad357a352de33efab3475bec5e095f3cda1b5e9c70aaefa44"
+    },
+    {
+      "file": "linux/usb/usb_ctrl_qti.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/usb/usb_ctrl_qti.h",
+      "bytes": 1511,
+      "sha256": "85604d551a148065897772b41e6c6e968bae0a2a2fa233b9fe3a1f85d43838ec"
+    },
+    {
+      "file": "linux/xiaomi_touch.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/linux/xiaomi_touch.h",
+      "bytes": 3375,
+      "sha256": "cd5cad79da9c53557065451d3607e70e3a7f1b943ae042a16dde2c5377f4cea7"
+    },
+    {
+      "file": "media/synx.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/media/synx.h",
+      "bytes": 4542,
+      "sha256": "9743607395f592bb76af9e76d0f81174ce2d8a1a3c3b852e81c0a39dc5acc481"
+    },
+    {
+      "file": "misc/adsp_sleepmon.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/misc/adsp_sleepmon.h",
+      "bytes": 2599,
+      "sha256": "d772ce94f65e26da5a678886e0656dfb4b0832cdb39fb624bfdeedf998c72c8e"
+    },
+    {
+      "file": "misc/cxl.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/misc/cxl.h",
+      "bytes": 3936,
+      "sha256": "5f9dd714e7f97d27c1e5254fe64a8f574cdf12eaacdc9f29124f6faa00d111dd"
+    },
+    {
+      "file": "misc/habanalabs.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/misc/habanalabs.h",
+      "bytes": 41738,
+      "sha256": "b0ce73adf80a8838517531aa92c8f574dc2c0a0f22588036c080b8c2cc7b54db"
+    },
+    {
+      "file": "scsi/cxlflash_ioctl.h",
+      "source": "device/qcom/kalama-kernel/kernel-headers/scsi/cxlflash_ioctl.h",
+      "bytes": 10168,
+      "sha256": "c0989661cc294a20c6a4aefa8e0fcb58dbbc86c36724e33bc4b8cc0eb9b42f53"
+    }
+  ],
+  "header_count": 58
+}

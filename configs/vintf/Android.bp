@@ -1,0 +1,5 @@
+package { default_applicable_licenses: ["Android-Apache-2.0"], }
+vintf_fragment {
+    name: "sheng_omapi_framework_manifest",
+    src: "secure_element-service.xml",
+}

@@ -1,0 +1,39 @@
+{
+  "reason": "Android17 AHandler::setDeliveryStatus writes start time at offset0x90, overwriting stock DisplayEffectBase::mVSDR2HDR at same offset. Existing foundation-v33 restores the vendor object ABI; only DT_NEEDED changed, .text verified unchanged. Runtime3 sleep/wake cycles PID10036 stable.",
+  "files": {
+    "odm/lib64/hw/displayfeature.default.so": {
+      "sha256": "3f7d15a076a5a44a7670d241472dda21d1290e40af3d8d20158bb5c77fc44e22",
+      "original_sha256": "0b614dcc6465bb174a7ff28bf09f07442c25692801cbac925e3294b5d88a4e80",
+      "text_sha256": "848baecde0bee358ece16450151de9a3aedf0280448fbcac67dda7bdd593360c",
+      "machine_code_unchanged": true
+    },
+    "odm/lib64/libmiBrightness.so": {
+      "sha256": "7a4324a3d8cbd437563afa9643ff43a313ab0d2d0fe76408373872d864fe6467",
+      "original_sha256": "403847677291dad60befdbc7d69b5841059f1bf9e60ec1844323fe0ccf881f2c",
+      "text_sha256": "e2663867fe76459976dbcc27a9d6b2163e119bc7ead459fe2542e1510016f5e7",
+      "machine_code_unchanged": true
+    },
+    "odm/lib64/libmiClstc.so": {
+      "sha256": "7c0669d7cb9e6fb93a01449d250e79a9202af0eaf655308107bad4c9aa0af534",
+      "original_sha256": "cc378322bf8723c160196b13d9e3bc7a06fb6c850a3eef981d2735814a792839",
+      "text_sha256": "febd30aca5aa382b9a99b5f025148bc165e84123721f4c44fa77094d99219bb8",
+      "machine_code_unchanged": true
+    },
+    "vendor/lib64/libstagefright_foundation-v33.so": {
+      "sha256": "04dca108a8481752f564b38f41702b70763c48520f39b7bb1ac766eca55ddbbe",
+      "source": "hardware/lineage/compat/vndk/v33/arm64/libstagefright_foundation-v33.so"
+    }
+  },
+  "vendor_targets": {
+    "vendor/xiaomi/sheng/proprietary/odm/lib64/libmiBrightness.so": {
+      "device_source": "displayfeature/odm/lib64/libmiBrightness.so",
+      "original_sha256": "403847677291dad60befdbc7d69b5841059f1bf9e60ec1844323fe0ccf881f2c",
+      "fixed_sha256": "7a4324a3d8cbd437563afa9643ff43a313ab0d2d0fe76408373872d864fe6467"
+    },
+    "vendor/xiaomi/sm8550-sheng-common/proprietary/odm/lib64/libmiClstc.so": {
+      "device_source": "displayfeature/odm/lib64/libmiClstc.so",
+      "original_sha256": "cc378322bf8723c160196b13d9e3bc7a06fb6c850a3eef981d2735814a792839",
+      "fixed_sha256": "7c0669d7cb9e6fb93a01449d250e79a9202af0eaf655308107bad4c9aa0af534"
+    }
+  }
+}

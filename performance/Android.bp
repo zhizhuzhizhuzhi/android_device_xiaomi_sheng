@@ -1,0 +1,248 @@
+// Exact Sheng stock performance 2.3 dependency closure. Standard ELF checks enabled.
+
+cc_prebuilt_binary {
+    name: "sheng_perf_vendor_qti_hardware_perf_hal_service",
+    srcs: [
+        "bin/hw/vendor.qti.hardware.perf-hal-service"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libbase",
+        "libutils",
+        "libhardware_legacy",
+        "libhardware",
+        "libhidlbase",
+        "vendor.qti.hardware.perf@2.0",
+        "vendor.qti.hardware.perf@2.1",
+        "vendor.qti.hardware.perf@2.2",
+        "vendor.qti.hardware.perf@2.3",
+        "sheng_perf_libperfconfig",
+        "sheng_perf_libperfgluelayer",
+        "sheng_perf_libqti_perfd_client",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "vendor.qti.hardware.perf-hal-service",
+    relative_install_path: "hw",
+    init_rc: [
+        "etc/init/vendor.qti.hardware.perf-hal-service.rc"
+    ],
+    vintf_fragments: [
+        "etc/vintf/manifest/vendor.qti.hardware.perf.xml"
+    ]
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_libqti_perfd",
+    srcs: [
+        "lib64/libqti-perfd.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libxml2",
+        "sheng_perf_libqti_util",
+        "libhidlbase",
+        "vendor.qti.hardware.perf@2.3",
+        "libbase",
+        "libthermalclient",
+        "sheng_perf_libqti_perfd_client",
+        "sheng_perf_libperfconfig",
+        "sheng_perf_libperfgluelayer",
+        "libdisplayconfig.qti",
+        "sheng_perf_libperfioctl",
+        "sheng_perf_vendor_qti_memory_pasrmanager_1_1",
+        "libutils",
+        "libutilscallstack",
+        "libcrypto",
+        "libssl",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "libqti-perfd"
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_libqti_perfd_client",
+    srcs: [
+        "lib64/libqti-perfd-client.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "liblog",
+        "vendor.qti.hardware.perf@2.2",
+        "vendor.qti.hardware.perf@2.3",
+        "libhidlbase",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "libqti-perfd-client"
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_libperfconfig",
+    srcs: [
+        "lib64/libperfconfig.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libcutils",
+        "libxml2",
+        "sheng_perf_libqti_util",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "libperfconfig"
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_libperfgluelayer",
+    srcs: [
+        "lib64/libperfgluelayer.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libcutils",
+        "sheng_perf_libqti_perfd_client",
+        "sheng_perf_libperfconfig",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "libperfgluelayer"
+}
+
+
+
+
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_libqti_util",
+    srcs: [
+        "lib64/libqti-util.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libxml2",
+        "liblog",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "libqti-util"
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_libperfioctl",
+    srcs: [
+        "lib64/libperfioctl.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libdrm",
+        "libutils",
+        "liblog",
+        "libcutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "libperfioctl"
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_vendor_qti_memory_pasrmanager_1_1",
+    srcs: [
+        "lib64/vendor.qti.memory.pasrmanager@1.1.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "sheng_perf_vendor_qti_memory_pasrmanager_1_0",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "vendor.qti.memory.pasrmanager@1.1"
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_perf_vendor_qti_memory_pasrmanager_1_0",
+    srcs: [
+        "lib64/vendor.qti.memory.pasrmanager@1.0.so"
+    ],
+    compile_multilib: "64",
+    strip: {
+        none: true
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+    ],
+    vendor: true,
+    stem: "vendor.qti.memory.pasrmanager@1.0"
+}

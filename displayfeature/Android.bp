@@ -1,0 +1,168 @@
+// Exact Sheng stock DisplayFeature services and missing dependency closure.
+// Standard prebuilt ELF checks remain enabled.
+
+cc_prebuilt_binary {
+    name: "sheng_df_vendor_xiaomi_hardware_displayfeature_1_0_service",
+    srcs: ["vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libbinder", "libhardware", "libhidlbase", "libhidltransport", "vendor.xiaomi.hardware.displayfeature@1.0", "libc++", "libc", "libm", "libdl"],
+    vendor: true,
+    stem: "vendor.xiaomi.hardware.displayfeature@1.0-service",
+    relative_install_path: "hw",
+    init_rc: ["vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc"],
+    vintf_fragments: ["vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml"],
+}
+
+cc_prebuilt_binary {
+    name: "sheng_df_displayfeature",
+    srcs: ["vendor/bin/displayfeature"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "sheng_df_libdisplayfeatureservice", "libgui_vendor", "libc++", "libc", "libm", "libdl"],
+    vendor: true,
+    stem: "displayfeature",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libdisplayfeature",
+    srcs: ["vendor/lib64/libdisplayfeature.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libgui_vendor", "libc++", "libc", "libm", "libdl"],
+    vendor: true,
+    stem: "libdisplayfeature",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libdisplayfeatureservice",
+    srcs: ["vendor/lib64/libdisplayfeatureservice.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "sheng_df_libdisplayfeature", "libhidltransport", "libhidlbase", "libgui_vendor", "vendor.xiaomi.hardware.displayfeature@1.0", "libc++", "libc", "libm", "libdl"],
+    vendor: true,
+    stem: "libdisplayfeatureservice",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_vendor_xiaomi_hardware_displayfeature_1_0_impl",
+    srcs: ["vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libhidlbase", "libhidltransport", "libutils", "liblog", "libcutils", "libhardware", "libbase", "libbinder", "vendor.xiaomi.hardware.displayfeature@1.0", "libc++", "libc", "libm", "libdl"],
+    vendor: true,
+    stem: "vendor.xiaomi.hardware.displayfeature@1.0-impl",
+    relative_install_path: "hw",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_displayfeature_default",
+    srcs: ["odm/lib64/hw/displayfeature.default.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libxml2", "libdrm", "libstagefright_foundation-v33", "libhidltransport", "libhidlbase", "android.frameworks.sensorservice@1.0", "libtinyxml2", "libhardware", "android.hardware.graphics.allocator@2.0", "android.hardware.graphics.allocator@3.0", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.common@1.2", "libmiSensorCtrl", "sheng_df_libtruetone", "libvideomode", "sheng_df_libpaperMode", "libmiBrightness", "sheng_df_libcolortempmode", "sheng_df_libflatmode", "libmi_dspp", "libMiDispDevManager", "libsdr2hdr", "sheng_df_libsre", "sheng_df_libdither", "libhdrmode", "sheng_df_libhistprocess", "sheng_df_libdisplaylog", "librhytheyecare", "sheng_df_libdisplaycount", "sheng_df_libadaptivehdr", "libqservice", "libsdm-disp-vndapis", "libgrallocutils", "libqdMetaData", "vendor.qti.hardware.display.mapper@3.0", "vendor.qti.hardware.display.allocator@3.0", "vendor.qti.hardware.display.mapperextensions@1.0", "libmi-stc-HW-modulate", "libdisplayconfig.qti", "libfpsmonitor", "libmiClstc", "libmiXmlParser", "libgui_vendor", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "displayfeature.default",
+    relative_install_path: "hw",
+}
+
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libtruetone",
+    srcs: ["odm/lib64/libtruetone.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiSensorCtrl", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libmi_dspp", "libfpsmonitor", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libtruetone",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libpaperMode",
+    srcs: ["odm/lib64/libpaperMode.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libmi-stc-HW-modulate", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libpaperMode",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libcolortempmode",
+    srcs: ["odm/lib64/libcolortempmode.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libcolortempmode",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libflatmode",
+    srcs: ["odm/lib64/libflatmode.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libflatmode",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libsre",
+    srcs: ["odm/lib64/libsre.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiSensorCtrl", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libmi-stc-HW-modulate", "libfpsmonitor", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libsre",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libdither",
+    srcs: ["odm/lib64/libdither.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiSensorCtrl", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libmi-stc-HW-modulate", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libdither",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libhistprocess",
+    srcs: ["odm/lib64/libhistprocess.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiSensorCtrl", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libhistprocess",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libdisplaylog",
+    srcs: ["odm/lib64/libdisplaylog.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libutils", "liblog", "libcutils", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libdisplaylog",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libdisplaycount",
+    srcs: ["odm/lib64/libdisplaycount.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libutils", "liblog", "libcutils", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libdisplaycount",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_df_libadaptivehdr",
+    srcs: ["odm/lib64/libadaptivehdr.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    shared_libs: ["libcutils", "liblog", "libutils", "libbinder", "libhidltransport", "libhidlbase", "libmiSensorCtrl", "libmiXmlParser", "android.frameworks.sensorservice@1.0", "libmiClstc", "libc++", "libc", "libm", "libdl"],
+    device_specific: true,
+    stem: "libadaptivehdr",
+}

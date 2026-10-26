@@ -1,8 +1,12 @@
-#!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
+#!/usr/bin/env python3
 #
 # SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
+
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'tools/extract-utils'))
 
 import extract_utils.tools
 
@@ -21,11 +25,9 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/sm8550-common',
-    'hardware/qcom-caf/sm8550',
+    'device/xiaomi/sm8550-sheng-common',
     'hardware/xiaomi',
-    'vendor/qcom/opensource/commonsys-intf/display',
-    'vendor/xiaomi/sm8550-common',
+    'vendor/xiaomi/sm8550-sheng-common',
 ]
 
 def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
@@ -107,6 +109,6 @@ module = ExtractUtilsModule(
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
-        module, 'sm8550-common', module.vendor
+        module, 'sm8550-sheng-common', module.vendor
     )
     utils.run()

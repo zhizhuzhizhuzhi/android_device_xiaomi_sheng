@@ -1,0 +1,28 @@
+--- a/device/qcom/common/vendor/perf/qti-perf.mk
++++ b/device/qcom/common/vendor/perf/qti-perf.mk
+@@ -16,9 +16,14 @@
+     TARGET_PERF_DIR := $(TARGET_BOARD_PLATFORM)
+ endif
+ 
+-PRODUCT_COPY_FILES += \
++# Sheng uses the matching stock 2.3 configs; keep unrelated common files.
++SHENG_STOCK_PERF_DESTINATIONS :=
++ifeq ($(TARGET_PRODUCT),aospa_sheng)
++SHENG_STOCK_PERF_DESTINATIONS := $(addprefix %:$(TARGET_COPY_OUT_VENDOR)/etc/perf/,$(notdir $(wildcard device/xiaomi/sheng/performance/etc/perf/*)))
++endif
++PRODUCT_COPY_FILES += $(filter-out $(SHENG_STOCK_PERF_DESTINATIONS), \
+     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
+-    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_PERF_DIR),$(TARGET_COPY_OUT_VENDOR)/etc)
++    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_PERF_DIR),$(TARGET_COPY_OUT_VENDOR)/etc))
+ 
+ # Disable the poweropt service for <5.4 platforms.
+ ifneq (,$(filter 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+@@ -34,7 +39,7 @@
+ 
+ # Properties
+ PRODUCT_VENDOR_PROPERTIES += \
+-    ro.vendor.perf-hal.ver=3.0 \
++    ro.vendor.perf-hal.ver=$(if $(filter aospa_sheng,$(TARGET_PRODUCT)),2.3,3.0) \
+     ro.vendor.extension_library=libqti-perfd-client.so \
+     ro.vendor.perf.scroll_opt=true \
+     ro.vendor.qspm.enable=false \

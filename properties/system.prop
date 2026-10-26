@@ -1,2 +1,5 @@
 # Xiaomi
 ro.product.mod_device=sheng_global
+
+# Wi-Fi-only product
+ro.radio.noril=true

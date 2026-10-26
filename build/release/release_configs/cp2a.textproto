@@ -1,0 +1,3 @@
+# SPDX-License-Identifier: Apache-2.0
+name: "cp2a"
+aconfig_value_sets: "//device/xiaomi/sheng:aconfig_value_set-sheng_kernel_capabilities"

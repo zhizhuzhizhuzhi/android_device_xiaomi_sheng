@@ -1,0 +1,151 @@
+{
+  "source": "https://cdnorg.d.miui.com/OS3.0.6.0.WNXMIXM/sheng_global-ota_full-OS3.0.6.0.WNXMIXM-user-16.0-4e690517b1.zip",
+  "partition_manifest_sha256": "94ba659eef693e60e9e14e1ad53865f3ff9608d4c41eda1130c1d95f9baca332",
+  "operation_sha256_verified": true,
+  "complete_partition_downloaded": false,
+  "method": "Selective verified payload operations; temporary synthetic root changes directory only for extraction; file data unchanged",
+  "files": [
+    {
+      "path": "lib64/soundfx/libhwdap.so",
+      "sha256": "2bdd308921248504295a8a710ddbc47a94b33f5e7bc3c5e0dfdb471af2835594",
+      "bytes": 170472,
+      "original_sha256": "2c8d8451a76fdcb53845b5368a7d46f5d699530d44aa499edfe64ceb76f11fe7",
+      "fixup": "DT_NEEDED foundation-v33 ABI fix plus SHA-gated legacy EQ length guard; >16 values return -EINVAL before memcpy_chk; no realtime/cache path changes",
+      "bounds_guard_audit": {
+        "before_sha256": "e72977b6d1cc8b1a9ec8c9cbad64e314fd8343430f63f7ee5636e538a6883d2b",
+        "after_sha256": "2bdd308921248504295a8a710ddbc47a94b33f5e7bc3c5e0dfdb471af2835594",
+        "patches": [
+          {
+            "address": "0x174e0",
+            "old": "090580b9",
+            "new": "2a3a0014"
+          },
+          {
+            "address": "0x25d88",
+            "old": "1f2003d5",
+            "new": "090580b9"
+          },
+          {
+            "address": "0x25d8c",
+            "old": "1f2003d5",
+            "new": "05000014"
+          },
+          {
+            "address": "0x25da0",
+            "old": "1f2003d5",
+            "new": "3f4100f1"
+          },
+          {
+            "address": "0x25da4",
+            "old": "1f2003d5",
+            "new": "05000014"
+          },
+          {
+            "address": "0x25db8",
+            "old": "1f2003d5",
+            "new": "e898f854"
+          },
+          {
+            "address": "0x25dbc",
+            "old": "1f2003d5",
+            "new": "cac5ff17"
+          }
+        ],
+        "behavior": "Reject legacy EQ tag payloads larger than 16 int32s with the existing -EINVAL return. Preserve __memcpy_chk, supported <=16 payloads, realtime DSP commits, all ABI fixes.",
+        "user_scope": "Unsupported generic GEQ; no buffer expansion or truncation"
+      }
+    },
+    {
+      "path": "lib64/libdapparamstorage.so",
+      "sha256": "800a3148475fc795c8f6675f422967cfc51c7f75ef5123261639b814d84ff660",
+      "bytes": 23904
+    },
+    {
+      "path": "lib64/libspatializerparamstorage.so",
+      "sha256": "622b20a4ad1225813bae73c6981b26dad150a2f40b291cdabb49c671066c5a9f",
+      "bytes": 244768
+    },
+    {
+      "path": "lib64/libdlbpreg.so",
+      "sha256": "aececf10f6bd1daa1abcd07a7e85da273c602339ffcd9e1aa29a4bf52e0d115c",
+      "bytes": 24208
+    },
+    {
+      "path": "lib64/vendor.dolby.hardware.dms@2.0.so",
+      "sha256": "983265f7e6fc9004b87a62a4f38b64f3e77b54acc3e24c3609e73df33d8d40aa",
+      "bytes": 261824
+    },
+    {
+      "path": "lib64/vendor.dolby.hardware.dms@2.0-impl.so",
+      "sha256": "27a8d408ad7a1e24bdd89ca15ff5a5f03d986ad10725d4f1fabe1b186f1216d3",
+      "bytes": 46952
+    },
+    {
+      "path": "lib64/libdlbdsservice.so",
+      "sha256": "8a6e2c0f6e6f0686f7653b18db36164613caf264ff1a8ee0b6dda73c40931f79",
+      "bytes": 463240,
+      "original_sha256": "ed5c4bd93b0fd3e97f8076c6d07ae2e7ca4ea15156b06d5d3e9788a6ebd57324",
+      "fixup": "DT_NEEDED libstagefright_foundation.so -> libstagefright_foundation-v33.so; .text byte-identical"
+    },
+    {
+      "path": "bin/hw/vendor.dolby.hardware.dms@2.0-service",
+      "sha256": "d4842e4167e9af6e0a257c1620e534e0d025cb18715971adce9ac98b10e3bd66",
+      "bytes": 11288
+    },
+    {
+      "path": "etc/init/vendor.dolby.hardware.dms@2.0-service.rc",
+      "sha256": "4e51845631d8f9765761892a5a01a883ebc3c21a9227c251969356c9b60f9d52",
+      "bytes": 186
+    },
+    {
+      "path": "etc/vintf/manifest/vendor.dolby.hardware.dms.xml",
+      "sha256": "9f83f02d98e92b4818e0cf5f223e9a8fd83c576756d5ac6fdc4e6badf0ec7892",
+      "bytes": 316
+    },
+    {
+      "path": "etc/dolby/dax-default.xml",
+      "sha256": "7c1c8e15a20214761f21f6c339ab3c9990566443de3864cf341ca1ace8d9543f",
+      "bytes": 91440
+    },
+    {
+      "path": "etc/audio/sku_kalama/audio_effects.xml",
+      "sha256": "d28c00b12ad4cd0e925e8b54dfac86a6db1a91d0b65737f15213e0ce2bc0ef51",
+      "bytes": 11950
+    }
+  ],
+  "ahandler_fixups": [
+    {
+      "source": "lib64/soundfx/libhwdap.so",
+      "original_sha256": "2c8d8451a76fdcb53845b5368a7d46f5d699530d44aa499edfe64ceb76f11fe7",
+      "patched_sha256": "e72977b6d1cc8b1a9ec8c9cbad64e314fd8343430f63f7ee5636e538a6883d2b",
+      "text_section_sha256": "a7788eefd7196ed30ea7f49882c11af4f16b2e2cca48c3fc346c6c3d7f931b9e"
+    },
+    {
+      "source": "lib64/libdlbdsservice.so",
+      "original_sha256": "ed5c4bd93b0fd3e97f8076c6d07ae2e7ca4ea15156b06d5d3e9788a6ebd57324",
+      "patched_sha256": "8a6e2c0f6e6f0686f7653b18db36164613caf264ff1a8ee0b6dda73c40931f79",
+      "text_section_sha256": "11bf7b50218c4eac2d6034093b0fc19007c38d5ae299f4faf9b4d80bc8a57a1a"
+    }
+  ],
+  "odm_tuning": {
+    "source": "https://cdnorg.d.miui.com/OS3.0.6.0.WNXMIXM/sheng_global-ota_full-OS3.0.6.0.WNXMIXM-user-16.0-4e690517b1.zip",
+    "partition_manifest_sha256": "699dcbce28913e84e6283e8254614a846b478a48d4bac3e71aef73c614b9020c",
+    "operation_sha256_verified": true,
+    "complete_partition_downloaded": false,
+    "method": "Selective verified payload operations; temporary synthetic root changes directory only for extraction; file data unchanged",
+    "files": [
+      {
+        "path": "etc/dolby/dax-default.xml",
+        "sha256": "71d429f7a2163636ce26f1e4563c02cad7df7023fe0c89b5965d7df6c642480f",
+        "bytes": 126092
+      },
+      {
+        "path": "lib64/libmiClstc.so",
+        "sha256": "cc378322bf8723c160196b13d9e3bc7a06fb6c850a3eef981d2735814a792839",
+        "bytes": 116216
+      }
+    ],
+    "selected": "etc/dolby/dax-default.xml",
+    "reason": "Stock four-channel speaker tuning, format3.6, missing in original device packaging; retain generic vendor fallback."
+  }
+}

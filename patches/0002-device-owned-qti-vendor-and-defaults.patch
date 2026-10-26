@@ -1,0 +1,128 @@
+--- a/device/qcom/common/vendor/alarm/qti-alarm.mk
++++ b/device/qcom/common/vendor/alarm/qti-alarm.mk
+@@ -11,4 +11,6 @@
+     init.qcom.alarm.rc
+ 
+ # Get non-open-source specific aspects.
++ifneq ($(TARGET_QTI_SKIP_COMMON_VENDOR_PREBUILTS),true)
+ $(call inherit-product-if-exists, vendor/qcom/common/vendor/alarm/alarm-vendor.mk)
++endif
+--- a/device/qcom/common/vendor/display/qti-display.mk
++++ b/device/qcom/common/vendor/display/qti-display.mk
+@@ -78,5 +78,9 @@
+     $(call find-copy-subdir-files,advanced_sf_offsets.xml,device/qcom/common/vendor/display/$(TARGET_DISP_DIR),$(TARGET_COPY_OUT_VENDOR)/etc/display)
+ 
+ # Get non-open-source specific aspects.
++ifneq ($(TARGET_QTI_SKIP_COMMON_VENDOR_PREBUILTS),true)
+ $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_DISP_DIR)/display-vendor.mk)
++endif
++ifneq ($(TARGET_QTI_SKIP_COMMON_VENDOR_PREBUILTS),true)
+ $(call inherit-product, vendor/qcom/common/vendor/display/display-vendor.mk)
++endif
+--- a/device/qcom/common/vendor/perf/qti-perf.mk
++++ b/device/qcom/common/vendor/perf/qti-perf.mk
+@@ -53,7 +53,9 @@
+     log.tag.vendor.qti.hardware.servicetrackeraidl-service=E
+ 
+ # Get non-open-source specific aspects
++ifneq ($(TARGET_QTI_SKIP_COMMON_VENDOR_PREBUILTS),true)
+ $(call inherit-product-if-exists, vendor/qcom/common/vendor/perf/perf-vendor.mk)
++endif
+ 
+ # AP engine is removed with its QSPM backend.
+ PRODUCT_COPY_FILES := $(filter-out %/QGPE.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/QGPE.xml,$(PRODUCT_COPY_FILES))
+--- a/device/qcom/common/vendor/wlan/qti-wlan.mk
++++ b/device/qcom/common/vendor/wlan/qti-wlan.mk
+@@ -79,4 +79,11 @@
+ endif
+ 
+ # Get non-open-source specific aspects.
++ifneq ($(TARGET_QTI_SKIP_COMMON_VENDOR_PREBUILTS),true)
+ $(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan/wlan-vendor.mk)
++endif
++
++# Prebuilt kernels install their modules through BoardConfig, not source package targets.
++ifeq ($(TARGET_KERNEL_DLKM_DISABLE),true)
++PRODUCT_PACKAGES := $(filter-out %.ko,$(PRODUCT_PACKAGES))
++endif
+--- a/device/qcom/common/dlkm/qti-dlkm.mk
++++ b/device/qcom/common/dlkm/qti-dlkm.mk
+@@ -5,7 +5,11 @@
+ 
+ include $(QCOM_COMMON_PATH)/dlkm/kernel-platform.mk
+ 
++# Device-owned prebuilt kernels do not build source DLKM packages.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ $(foreach vbdefs, $(sort $(wildcard vendor/qcom/defs/board-defs/vendor/*.mk)), \
+     $(call inherit-product, $(vbdefs)))
+ $(foreach vpdefs, $(sort $(wildcard vendor/qcom/defs/product-defs/vendor/*.mk)), \
+     $(call inherit-product, $(vpdefs)))
++
++endif
+--- a/hardware/qcom/display/config/display-product.mk
++++ b/hardware/qcom/display/config/display-product.mk
+@@ -50,7 +50,7 @@
+ PRODUCT_PROPERTY_OVERRIDES += \
+     persist.demo.hdmirotationlock=false \
+     persist.sys.sf.color_saturation=1.0 \
+-    persist.sys.sf.color_mode=9 \
++    persist.sys.sf.color_mode?=9 \
+     debug.sf.hw=0 \
+     debug.egl.hw=0 \
+     debug.sf.latch_unsignaled=1 \
+@@ -63,21 +63,21 @@
+     vendor.display.disable_excl_rect_partial_fb=1 \
+     vendor.display.comp_mask=0 \
+     vendor.display.enable_optimize_refresh=0 \
+-    vendor.display.use_smooth_motion=1 \
++    vendor.display.use_smooth_motion?=1 \
+     vendor.display.disable_stc_dimming=1 \
+-    vendor.display.enable_dpps_dynamic_fps=1 \
++    vendor.display.enable_dpps_dynamic_fps?=1 \
+     debug.sf.disable_client_composition_cache=1 \
+-    debug.sf.enable_gl_backpressure=1 \
++    debug.sf.enable_gl_backpressure?=1 \
+     debug.sf.enable_hwc_vds=0 \
+     debug.sf.enable_advanced_sf_phase_offset=1 \
+     vendor.display.vds_allow_hwc=1 \
+-    debug.sf.use_phase_offsets_as_durations=1 \
++    debug.sf.use_phase_offsets_as_durations?=1 \
+     debug.sf.late.app.duration=13666666 \
+     debug.sf.early.app.duration=13666666 \
+     debug.sf.earlyGl.app.duration=13666666 \
+-    debug.sf.early.sf.duration=15666666 \
+-    debug.sf.earlyGl.sf.duration=15666666 \
+-    debug.sf.late.sf.duration=15666666 \
++    debug.sf.early.sf.duration?=15666666 \
++    debug.sf.earlyGl.sf.duration?=15666666 \
++    debug.sf.late.sf.duration?=15666666 \
+     vendor.display.enable_async_vds_creation=1 \
+     vendor.display.enable_rounded_corner=1 \
+     vendor.display.disable_3d_adaptive_tm=1 \
+@@ -134,13 +134,13 @@
+ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ # Recovery is enabled, logging is enabled
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    vendor.display.disable_hw_recovery_dump=0
++    vendor.display.disable_hw_recovery_dump?=0
+ PRODUCT_PROPERTY_OVERRIDES += \
+     vendor.display.hw_recovery_threshold=5
+ else
+ # Recovery is enabled, logging is disabled
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    vendor.display.disable_hw_recovery_dump=1
++    vendor.display.disable_hw_recovery_dump?=1
+ endif
+ 
+ ifeq ($(TARGET_USES_QMAA),true)
+--- a/vendor/qcom/opensource/audio-hal/primary-hal/configs/kalama/kalama.mk
++++ b/vendor/qcom/opensource/audio-hal/primary-hal/configs/kalama/kalama.mk
+@@ -293,7 +293,7 @@
+ 
+ #split a2dp DSP supported encoder list
+ PRODUCT_PROPERTY_OVERRIDES += \
+-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
++persist.vendor.bt.a2dp_offload_cap?=sbc-aptx-aptxtws-aptxhd-aac-ldac
+ 
+ # A2DP offload support
+ PRODUCT_PROPERTY_OVERRIDES += \

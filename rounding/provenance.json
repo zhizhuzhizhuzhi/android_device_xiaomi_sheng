@@ -1,0 +1,43 @@
+{
+  "stock_apk": "product/overlay/DevicesOverlay.apk",
+  "stock_apk_sha256": "300e3439a37c7c00d340294f8f6d2e736167e8869635cbcdfe61fbeaabc51236",
+  "framework_apk": "product/overlay/DevicesAndroidOverlay.apk",
+  "framework_apk_sha256": "4a17637d17b0ba4d74b4641aa03ec0dd1f246950b00fdda9515397c6fe0844fd",
+  "official_framework_radius_px": 66,
+  "mask_tile_px": 208,
+  "density": "nodpi, no density resampling",
+  "files": [
+    {
+      "entry": "res/drawable-anydpi-v21/screen_round_corner_top.png",
+      "source_sha256": "2f629e734693bf88d0725364a1faba836fef7b0c8eaefa51bc111a1e3c69ebe7",
+      "output": "overlay/SystemUIOverlaySheng/res/drawable-nodpi/rounded_corner_top.png",
+      "output_sha256": "5f9dbe2dc1750501f093f293ec8190fd91b6d3103048be72cacea37c2171319b",
+      "pixel_rgba_sha256": "cb1e0717b61f31603d9abd7e4d1e8467b5e294fd6e75385c607a8b6047898002",
+      "crop": [
+        0,
+        0,
+        208,
+        208
+      ],
+      "vertical_flip": false,
+      "partial_alpha_pixels": 171,
+      "source_region_pixels_equal": true
+    },
+    {
+      "entry": "res/drawable-anydpi-v21/screen_round_corner_bottom.png",
+      "source_sha256": "8ba13eea0a5f56b346b37c7eeb0fea241df2d62e977f31ba09b985f5d44f17e9",
+      "output": "overlay/SystemUIOverlaySheng/res/drawable-nodpi/rounded_corner_bottom.png",
+      "output_sha256": "b2db6033a4a32324a35246372373c30085fc77900cd88cddd3c5a0278b03677f",
+      "pixel_rgba_sha256": "ce9f5c47453aa41ed2d86d60805cc06449ed4d11af25765ce52734c757b6708a",
+      "crop": [
+        0,
+        0,
+        208,
+        208
+      ],
+      "vertical_flip": true,
+      "partial_alpha_pixels": 171,
+      "source_region_pixels_equal": true
+    }
+  ]
+}

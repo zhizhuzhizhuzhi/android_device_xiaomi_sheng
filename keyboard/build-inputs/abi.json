@@ -1,0 +1,14 @@
+{
+  "kernel_source_revision": "b00609b259a508cef1e5053928c94f3efc7d13f7",
+  "modinfo": [
+    "license=GPL",
+    "description=Sheng Nanosic Caps Lock HID output translation",
+    "vermagic=5.15.178-android13-8-gb00609b259a5 SMP preempt mod_unload modversions aarch64",
+    "name=hid_nanosic_capslock",
+    "depends=",
+    "alias=hid:b0006g0001v000015D9p000000A3"
+  ],
+  "versions_sha256": "c36e66f86a240724fc4795ed0b11862f7fa03c2aebf346f62d73f757451277f1",
+  "source_sha256": "05630cac1e3fc9e6a7a8fea14f0ebca1bf04bd7f071e617245b44f0821c7c179",
+  "reference_module_sha256": "2ec2436a662c62e7a257b6312e8629949b2b4692bf1179723899f0db4d82b94c"
+}

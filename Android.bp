@@ -5,4 +5,98 @@
 //
 
 soong_namespace {
+    imports: [
+        "vendor/xiaomi/sheng",
+        "vendor/xiaomi/sm8550-sheng-common",
+        "hardware/xiaomi",
+    ],
 }
+
+aconfig_values {
+    name: "aconfig_values-sheng_kernel_capabilities",
+    package: "android.bpfprogs.flags",
+    srcs: ["build/release/aconfig/dmabuf_iterator.textproto"],
+}
+aconfig_value_set {
+    name: "aconfig_value_set-sheng_kernel_capabilities",
+    values: ["aconfig_values-sheng_kernel_capabilities"],
+}
+
+// Matching stock display binaries, with standard build checks.
+filegroup {
+    name: "sheng_stock_display_vendor.qti.hardware.display.composer-service",
+    srcs: ["prebuilts/display/bin/hw/vendor.qti.hardware.display.composer-service"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libsdmcore",
+    srcs: ["prebuilts/display/lib64/libsdmcore.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libqservice",
+    srcs: ["prebuilts/display/lib64/libqservice.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libdisplaydebug",
+    srcs: ["prebuilts/display/lib64/libdisplaydebug.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libsdmutils",
+    srcs: ["prebuilts/display/lib64/libsdmutils.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libgpu_tonemapper",
+    srcs: ["prebuilts/display/lib64/libgpu_tonemapper.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libhistogram",
+    srcs: ["prebuilts/display/lib64/libhistogram.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libdisplayconfig.qti",
+    srcs: ["prebuilts/display/lib64/libdisplayconfig.qti.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libgralloc.qti",
+    srcs: ["prebuilts/display/lib64/libgralloc.qti.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libgrallocutils",
+    srcs: ["prebuilts/display/lib64/libgrallocutils.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libdrm",
+    srcs: ["prebuilts/display/lib64/libdrm.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libdrmutils",
+    srcs: ["prebuilts/display/lib64/libdrmutils.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libsdedrm",
+    srcs: ["prebuilts/display/lib64/libsdedrm.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_libsdmdal",
+    srcs: ["prebuilts/display/lib64/libsdmdal.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup {
+    name: "sheng_stock_display_vendor.xiaomi.hardware.displayfeature@1.0",
+    srcs: ["prebuilts/display/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so"],
+    visibility: ["//visibility:public"],
+}
+filegroup { name: "sheng_display_composer_init", srcs: ["prebuilts/display/vendor.qti.hardware.display.composer-service.rc"], visibility: ["//visibility:public"] }
+filegroup { name: "sheng_display_composer_manifest", srcs: ["prebuilts/display/vendor.qti.hardware.display.composer-service.xml"], visibility: ["//visibility:public"] }

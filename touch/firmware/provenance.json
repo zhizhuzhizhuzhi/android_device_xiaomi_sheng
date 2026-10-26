@@ -1,0 +1,17 @@
+[
+  {
+    "source": "work/stock-dump/odm/firmware/film_model.tflite",
+    "destination": "device/xiaomi/sheng/touch/firmware/film_model.tflite",
+    "sha256": "ebde241859f559c6fe994feb2fe73e659060863fa0533e01b41ac60c414953a0"
+  },
+  {
+    "source": "work/stock-dump/odm/firmware/water_check.tflite",
+    "destination": "device/xiaomi/sheng/touch/firmware/water_check.tflite",
+    "sha256": "2fd977535eda59e5d8b980d1724b12f205356a7f5a3e8114926307ed52ff5575"
+  },
+  {
+    "source": "work/stock-dump/odm/firmware/glove_model.tflite",
+    "destination": "device/xiaomi/sheng/touch/firmware/glove_model.tflite",
+    "sha256": "85a320b73f31b5650a48629ba75f986b3db2cce4f3ef2d1ae18f3c304a789de2"
+  }
+]

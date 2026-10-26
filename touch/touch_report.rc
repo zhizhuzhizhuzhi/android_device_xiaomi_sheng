@@ -1,0 +1,24 @@
+on post-fs-data
+    mkdir /data/vendor/touch 0771 system system
+    mkdir /data/vendor/mqsas_common 0771 system system
+
+service touch_report /vendor/bin/touch_report
+    class hal
+    user system
+    group system uhid input
+    capabilities SYS_NICE
+    ioprio rt 4
+
+on boot
+    chown system system /dev/xiaomi-touch
+    chmod 0664 /dev/xiaomi-touch
+    chown system system /sys/class/touch/touch_dev/touch_ic_buffer
+    chmod 0664 /sys/class/touch/touch_dev/touch_ic_buffer
+    chown system system /sys/class/touch/touch_dev/touch_thp_ic_cmd
+    chmod 0664 /sys/class/touch/touch_dev/touch_thp_ic_cmd
+    chown system system /sys/class/touch/touch_dev/touch_thp_ic_cmd_data
+    chmod 0664 /sys/class/touch/touch_dev/touch_thp_ic_cmd_data
+    chown system system /sys/class/touch/touch_dev/abnormal_event
+    chmod 0664 /sys/class/touch/touch_dev/abnormal_event
+    chown system system /sys/class/touch/touch_dev/touch_finger_status
+    chmod 0664 /sys/class/touch/touch_dev/touch_finger_status

@@ -1,0 +1,47 @@
+// Exact Sheng OS3.0.6.0.WNXMIXM OEM components; linker closure tested on device.
+cc_prebuilt_library_shared {
+    name: "sheng_dolby_hwdap",
+    required: ["libstagefright_foundation-v33"],
+    stem: "libhwdap",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["proprietary/lib64/soundfx/libhwdap.so"],
+    check_elf_files: false,
+    strip: { none: true },
+    relative_install_path: "soundfx",
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_dolby_dms_impl",
+    stem: "vendor.dolby.hardware.dms@2.0-impl",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["proprietary/lib64/vendor.dolby.hardware.dms@2.0-impl.so"],
+    check_elf_files: false,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "sheng_dolby_dsservice",
+    required: ["libstagefright_foundation-v33"],
+    stem: "libdlbdsservice",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["proprietary/lib64/libdlbdsservice.so"],
+    check_elf_files: false,
+    strip: { none: true },
+}
+
+cc_prebuilt_binary {
+    name: "sheng_dolby_dms_service",
+    stem: "vendor.dolby.hardware.dms@2.0-service",
+    vendor: true,
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    srcs: ["proprietary/bin/hw/vendor.dolby.hardware.dms@2.0-service"],
+    init_rc: ["proprietary/etc/init/vendor.dolby.hardware.dms@2.0-service.rc"],
+    vintf_fragments: ["proprietary/etc/vintf/manifest/vendor.dolby.hardware.dms.xml"],
+    required: ["sheng_dolby_dms_impl", "sheng_dolby_dsservice"],
+    check_elf_files: false,
+    strip: { none: true },
+}

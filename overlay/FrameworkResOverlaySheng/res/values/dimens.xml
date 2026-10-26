@@ -29,9 +29,11 @@
     
     <!-- Radius of the software rounded corners at the top of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_top">28.0px</dimen>
+    <dimen name="rounded_corner_radius_top">66.0px</dimen>
 
     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">28.0px</dimen>
+    <dimen name="rounded_corner_radius_bottom">66.0px</dimen>
+    <!-- DevicesAndroidOverlay in the official Sheng firmware declares 66px. -->
+    <dimen name="rounded_corner_radius">66.0px</dimen>
 </resources>

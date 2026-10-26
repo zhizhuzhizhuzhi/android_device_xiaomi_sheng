@@ -6,4 +6,7 @@
 <resources>
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string name="def_device_name_simple">Xiaomi Pad 6S Pro 12.4</string>
+    <!-- Landscape by default; users can still enable automatic rotation. -->
+    <bool name="def_accelerometer_rotation">false</bool>
+    <integer name="def_user_rotation">1</integer>
 </resources>

@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+# Verified stock 5.15 kernel: CONFIG_DMABUF_SYSFS_STATS=y.
+flag_value {
+    package: "android.bpfprogs.flags"
+    name: "load_dmabuf_iterator"
+    state: DISABLED
+    permission: READ_ONLY
+}

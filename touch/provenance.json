@@ -1,0 +1,35 @@
+[
+  {
+    "source": "work/stock-dump/odm/lib64/libtouchreport.so",
+    "sha256": "3b5f5fdb07daaa8a74abdb3b21092e41d5be612b4b473c42228ae4a7910d3a9f",
+    "needed": [
+      "libtouchsensor",
+      "libtensorflowlite_touch_c",
+      "libdl",
+      "liblog",
+      "libc",
+      "libm"
+    ]
+  },
+  {
+    "source": "work/stock-dump/odm/lib64/libtouchsensor.so",
+    "sha256": "5172f25ff1bac6230b463cb039f1f450533608c1595ce70247bd941eb3cd7534",
+    "needed": [
+      "libtensorflowlite_touch_c",
+      "libdl",
+      "liblog",
+      "libc",
+      "libm"
+    ]
+  },
+  {
+    "source": "work/stock-dump/odm/lib64/libtensorflowlite_touch_c.so",
+    "sha256": "587da20ed5dfb899eaeaad155524a7f58545a581ca32d5ba929ceaf0ab70e5c2",
+    "needed": [
+      "libm",
+      "liblog",
+      "libdl",
+      "libc"
+    ]
+  }
+]

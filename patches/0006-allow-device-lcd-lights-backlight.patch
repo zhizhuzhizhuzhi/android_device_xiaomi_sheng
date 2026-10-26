@@ -1,0 +1,14 @@
+--- a/frameworks/base/services/core/java/com/android/server/display/LocalDisplayAdapter.java
++++ b/frameworks/base/services/core/java/com/android/server/display/LocalDisplayAdapter.java
+@@ -1918,7 +1918,10 @@
+             mDisplayToken = displayToken;
+             mSurfaceControlProxy = surfaceControlProxy;
+ 
+-            mUseSurfaceControlBrightness = mSurfaceControlProxy
++            // Some LCD panels expose HWC brightness without driving the physical backlight.
++            // Allow those devices to use their standard Lights HAL for the internal panel.
++            mUseSurfaceControlBrightness = !(isFirstDisplay && SystemProperties.getBoolean(
++                    "ro.display.force_lights_hal", false)) && mSurfaceControlProxy
+                     .getDisplayBrightnessSupport(mDisplayToken);
+ 
+             if (!mUseSurfaceControlBrightness && isFirstDisplay) {

@@ -1,0 +1,20 @@
+{
+  "stock_prebuilt_elfs": [
+    "bin/hw/vendor.qti.hardware.perf-hal-service",
+    "lib64/libqti-perfd.so",
+    "lib64/libqti-perfd-client.so",
+    "lib64/libperfconfig.so",
+    "lib64/libperfgluelayer.so",
+    "lib64/libqti-util.so",
+    "lib64/libperfioctl.so",
+    "lib64/vendor.qti.memory.pasrmanager@1.1.so",
+    "lib64/vendor.qti.memory.pasrmanager@1.0.so"
+  ],
+  "source_built_hidl_interfaces": [
+    "vendor.qti.hardware.perf@2.0",
+    "vendor.qti.hardware.perf@2.1",
+    "vendor.qti.hardware.perf@2.2",
+    "vendor.qti.hardware.perf@2.3"
+  ],
+  "reason": "Use existing standard vendor HIDL variants; avoid duplicate vendor and symbols install rules. Original stock reference bytes/provenance retained, not installed. ELF checks validate all proprietary dependencies against these source-built interfaces."
+}

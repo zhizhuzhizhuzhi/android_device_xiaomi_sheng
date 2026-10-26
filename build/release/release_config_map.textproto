@@ -1,0 +1,3 @@
+# SPDX-License-Identifier: Apache-2.0
+description: "Sheng stock kernel capabilities"
+default_containers: "system"

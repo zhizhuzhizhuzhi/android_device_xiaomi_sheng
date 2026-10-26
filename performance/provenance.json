@@ -1,0 +1,317 @@
+{
+  "bin/hw/vendor.qti.hardware.perf-hal-service": {
+    "source": "vendor/bin/hw/vendor.qti.hardware.perf-hal-service",
+    "bytes": 42832,
+    "sha256": "3fbe9a8e6b6a2ab5bd33843387bbb2eed291cc13fec72b2e38e21a9ba60a72a6",
+    "needed": [
+      "liblog.so",
+      "libcutils.so",
+      "libbase.so",
+      "libutils.so",
+      "libhardware_legacy.so",
+      "libhardware.so",
+      "libhidlbase.so",
+      "vendor.qti.hardware.perf@2.0.so",
+      "vendor.qti.hardware.perf@2.1.so",
+      "vendor.qti.hardware.perf@2.2.so",
+      "vendor.qti.hardware.perf@2.3.so",
+      "libperfconfig.so",
+      "libperfgluelayer.so",
+      "libqti-perfd-client.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/libqti-perfd.so": {
+    "source": "vendor/lib64/libqti-perfd.so",
+    "bytes": 417408,
+    "sha256": "843bf2f48cedb3439228a78659ebf1d9603e778b3868f129a1339c0c27b2e7bb",
+    "needed": [
+      "libcutils.so",
+      "liblog.so",
+      "libxml2.so",
+      "libqti-util.so",
+      "libhidlbase.so",
+      "vendor.qti.hardware.perf@2.3.so",
+      "libbase.so",
+      "libthermalclient.so",
+      "libqti-perfd-client.so",
+      "libperfconfig.so",
+      "libperfgluelayer.so",
+      "libdisplayconfig.qti.so",
+      "libperfioctl.so",
+      "vendor.qti.memory.pasrmanager@1.1.so",
+      "libutils.so",
+      "libutilscallstack.so",
+      "libcrypto.so",
+      "libssl.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/libqti-perfd-client.so": {
+    "source": "vendor/lib64/libqti-perfd-client.so",
+    "bytes": 80392,
+    "sha256": "12fbb7f7974c7bf13a019a3691601ac655e479dee71d854b726eb4a3afd43845",
+    "needed": [
+      "libcutils.so",
+      "libutils.so",
+      "liblog.so",
+      "vendor.qti.hardware.perf@2.2.so",
+      "vendor.qti.hardware.perf@2.3.so",
+      "libhidlbase.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/libperfconfig.so": {
+    "source": "vendor/lib64/libperfconfig.so",
+    "bytes": 53552,
+    "sha256": "ff1308f14842718c6a6933cb335a4b1cf8d5ae068b5e66bc11a3c8410930c705",
+    "needed": [
+      "libutils.so",
+      "liblog.so",
+      "libcutils.so",
+      "libxml2.so",
+      "libqti-util.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/libperfgluelayer.so": {
+    "source": "vendor/lib64/libperfgluelayer.so",
+    "bytes": 32592,
+    "sha256": "85c078e1874c209a24f521b829443ebd7e101ad6c57a86e80d522c1d4ee8bc38",
+    "needed": [
+      "libutils.so",
+      "liblog.so",
+      "libcutils.so",
+      "libqti-perfd-client.so",
+      "libperfconfig.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/vendor.qti.hardware.perf@2.0.so": {
+    "source": "vendor/lib64/vendor.qti.hardware.perf@2.0.so",
+    "bytes": 131032,
+    "sha256": "1047d529ae0e39ba02789338ff4f81c3c01d75a348ff8730085714ca5949f09d",
+    "needed": [
+      "libhidlbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/vendor.qti.hardware.perf@2.1.so": {
+    "source": "vendor/lib64/vendor.qti.hardware.perf@2.1.so",
+    "bytes": 182432,
+    "sha256": "6837221c6132c9a3952d9c6d8981769c231532da204deb7271fe8cb5514b27e9",
+    "needed": [
+      "vendor.qti.hardware.perf@2.0.so",
+      "libhidlbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/vendor.qti.hardware.perf@2.2.so": {
+    "source": "vendor/lib64/vendor.qti.hardware.perf@2.2.so",
+    "bytes": 140504,
+    "sha256": "6c07c2b11f2daf000a0155171922e6be89bd46284f975052424aad16d57a6a25",
+    "needed": [
+      "vendor.qti.hardware.perf@2.0.so",
+      "vendor.qti.hardware.perf@2.1.so",
+      "libhidlbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/vendor.qti.hardware.perf@2.3.so": {
+    "source": "vendor/lib64/vendor.qti.hardware.perf@2.3.so",
+    "bytes": 145560,
+    "sha256": "74ad29d28e74025719c5240b80f7cb1d979d53e3b35d069de0f95f1d169e6c66",
+    "needed": [
+      "vendor.qti.hardware.perf@2.0.so",
+      "vendor.qti.hardware.perf@2.1.so",
+      "vendor.qti.hardware.perf@2.2.so",
+      "libhidlbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/libqti-util.so": {
+    "source": "vendor/lib64/libqti-util.so",
+    "bytes": 32352,
+    "sha256": "eab7c4c19a8881b241461e2cf745782c2dd2c18ced0b06706a38c46253a52d94",
+    "needed": [
+      "libcutils.so",
+      "libutils.so",
+      "libxml2.so",
+      "liblog.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/libperfioctl.so": {
+    "source": "vendor/lib64/libperfioctl.so",
+    "bytes": 15104,
+    "sha256": "888532222ba7de67b422f3b50feee6dd10c29ad9edd258a1ab94b244861c5321",
+    "needed": [
+      "libdrm.so",
+      "libutils.so",
+      "liblog.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/vendor.qti.memory.pasrmanager@1.1.so": {
+    "source": "vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so",
+    "bytes": 144248,
+    "sha256": "51db1af5c7d31f68c62ba5ba80daf2f0dc70cbd437e30e122169ec8c18d4a536",
+    "needed": [
+      "vendor.qti.memory.pasrmanager@1.0.so",
+      "libhidlbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "lib64/vendor.qti.memory.pasrmanager@1.0.so": {
+    "source": "vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so",
+    "bytes": 126336,
+    "sha256": "26574519cc2b129e359461f13fe2dbde715c359ca758258cde3ec03b17d64920",
+    "needed": [
+      "libhidlbase.so",
+      "liblog.so",
+      "libutils.so",
+      "libcutils.so",
+      "libc++.so",
+      "libc.so",
+      "libm.so",
+      "libdl.so"
+    ]
+  },
+  "etc/perf/testtargetresourceconfigs.xml": {
+    "source": "vendor/etc/perf/testtargetresourceconfigs.xml",
+    "bytes": 2706,
+    "sha256": "fe2203683511c4655a684f34a1aee9c0695a15c7fbd5294cd7422cc25b075ddd"
+  },
+  "etc/perf/avcsysnodesconfigs.xml": {
+    "source": "vendor/etc/perf/avcsysnodesconfigs.xml",
+    "bytes": 1871,
+    "sha256": "7fded53a23bd067374075f8c85b5c60dc03f6de1aba511200e5af39e3f8637ae"
+  },
+  "etc/perf/commonsysnodesconfigs.xml": {
+    "source": "vendor/etc/perf/commonsysnodesconfigs.xml",
+    "bytes": 2744,
+    "sha256": "5d19c74aa1448d72f3511c7636243c3db61a4c4963cd9b4a2bcbc28d58d32651"
+  },
+  "etc/perf/thermalbreakboostconfig.xml": {
+    "source": "vendor/etc/perf/thermalbreakboostconfig.xml",
+    "bytes": 3830,
+    "sha256": "518fa037c4a613ef2c2b2fdbe4eac34d88e700ab6afbce5513eb9a02b1ad0e2e"
+  },
+  "etc/perf/targetresourceconfigs.xml": {
+    "source": "vendor/etc/perf/targetresourceconfigs.xml",
+    "bytes": 14306,
+    "sha256": "ec4af332c3a95cbda600171a5c2a5e649db460eaaf6730dc85a586ccb9c79931"
+  },
+  "etc/perf/powerhint.xml": {
+    "source": "vendor/etc/perf/powerhint.xml",
+    "bytes": 1422,
+    "sha256": "7207d3c1d7083b0fa9542d99b9f1a4c5eaf4b48c795f8249e8335aa15c50300c"
+  },
+  "etc/perf/targetavcsysnodesconfigs.xml": {
+    "source": "vendor/etc/perf/targetavcsysnodesconfigs.xml",
+    "bytes": 712,
+    "sha256": "ef3089f6f48b6842135c93a35169b05fbcdb42b4f7fd59d1da37221cd84ed039"
+  },
+  "etc/perf/perfboostsconfig.xml": {
+    "source": "vendor/etc/perf/perfboostsconfig.xml",
+    "bytes": 50232,
+    "sha256": "e902d1905d6ce22bb62605855f73bc72553cc939ecf11d01ec9acc532c78f25d"
+  },
+  "etc/perf/commonresourceconfigs.xml": {
+    "source": "vendor/etc/perf/commonresourceconfigs.xml",
+    "bytes": 27806,
+    "sha256": "89a616209fc39616f67aab2c7f8f0523cd079e1662826a01969caebaeb7cedc9"
+  },
+  "etc/perf/perfconfigstore.xml": {
+    "source": "vendor/etc/perf/perfconfigstore.xml",
+    "bytes": 6606,
+    "sha256": "2b36e3cd42176b2058e6ebb1623d1ab7a18c4e812ecb975bd5bf59b7c03733e6"
+  },
+  "etc/perf/thermal-boost.conf": {
+    "source": "vendor/etc/perf/thermal-boost.conf",
+    "bytes": 3200,
+    "sha256": "83e4557d62c87cc96d9bc55fe6326f3e35348e73e41fa4ffcdc8215717ee655d"
+  },
+  "etc/perf/testcommonresourceconfigs.xml": {
+    "source": "vendor/etc/perf/testcommonresourceconfigs.xml",
+    "bytes": 20765,
+    "sha256": "4c1e77eca723d020e8bbcda3376054a8b0333f1cc0aa5109443d4d3715459517"
+  },
+  "etc/perf/targetconfig.xml": {
+    "source": "vendor/etc/perf/targetconfig.xml",
+    "bytes": 2500,
+    "sha256": "99e1e44e206219067a4ee26826f9cc87ab86c3d55a544c6c8bbac7cc4656ba42"
+  },
+  "etc/perf/perfboostselection.xml": {
+    "source": "vendor/etc/perf/perfboostselection.xml",
+    "bytes": 9414,
+    "sha256": "57f93db729acbff95f5ab88bce908a433d02f3c72bc944e3c54d83f22f1ca87b"
+  },
+  "etc/perf/targetsysnodesconfigs.xml": {
+    "source": "vendor/etc/perf/targetsysnodesconfigs.xml",
+    "bytes": 1633,
+    "sha256": "d2eb33cca8cacbeaf7590497e7b245d9f70003f0e9eddd35ac8b1deda4f1ea4e"
+  },
+  "etc/vintf/manifest/vendor.qti.hardware.perf.xml": {
+    "source": "vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml",
+    "bytes": 1870,
+    "sha256": "334f35898177c8c9d59d057593f76cb2b4cc89abaace73786ccc27b70bd22559"
+  },
+  "etc/init/vendor.qti.hardware.perf-hal-service.rc": {
+    "source": "vendor/etc/init/vendor.qti.hardware.perf-hal-service.rc",
+    "bytes": 1471,
+    "sha256": "41ede4f5dd2edb031649d6a53d71c563fa3baa672593cf6f4b2e223ce291db8c"
+  }
+}

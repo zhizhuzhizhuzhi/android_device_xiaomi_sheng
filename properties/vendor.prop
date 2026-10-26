@@ -1,3 +1,19 @@
 # Fingerprint
 persist.vendor.fingerprint.sensor_location=0|965|115|local:44630947038039379843
 persist.vendor.fingerprint.type=side
+
+# Official Sheng hardware defaults; common platform properties are optional.
+debug.sf.early.sf.duration=10500000
+debug.sf.earlyGl.sf.duration=10500000
+debug.sf.enable_gl_backpressure=1
+debug.sf.late.sf.duration=10500000
+debug.sf.use_phase_offsets_as_durations=1
+persist.sys.sf.color_mode=0
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-lhdc
+ro.surface_flinger.game_default_frame_rate_override=60
+ro.surface_flinger.supports_background_blur=1
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.use_smooth_motion=0
+
+# Factory Sheng EQ transport has half-size payload buffers.
+ro.vendor.audio.dolby.eq.half=true

@@ -1,0 +1,308 @@
+--- a/vendor/qcom/opensource/audio-kernel/Android.mk
++++ b/vendor/qcom/opensource/audio-kernel/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android makefile for audio kernel modules
+ 
+ LOCAL_PATH := $(call my-dir)
+@@ -480,3 +482,5 @@
+ ###########################################################
+ endif # DLKM check
+ endif # supported target check
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/bt-kernel/Android.mk
++++ b/vendor/qcom/opensource/bt-kernel/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android makefile for BT kernel modules
+ 
+ LOCAL_PATH := $(call my-dir)
+@@ -90,3 +92,5 @@
+ 
+ endif # DLKM check
+ endif # supported target check
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/camera-kernel/Android.mk
++++ b/vendor/qcom/opensource/camera-kernel/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ CAMERA_DLKM_ENABLED := true
+ ifeq ($(TARGET_KERNEL_DLKM_DISABLE), true)
+ 	ifeq ($(TARGET_KERNEL_DLKM_CAMERA_OVERRIDE), false)
+@@ -73,3 +75,5 @@
+ 
+ endif # End of check for board platform
+ endif # ifeq ($(CAMERA_DLKM_ENABLED),true)
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/dataipa/drivers/platform/msm/Android.mk
++++ b/vendor/qcom/opensource/dataipa/drivers/platform/msm/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ GSI_DLKM_PLATFORMS_LIST := taro kalama bengal monaco crow $(TRINKET)
+ 
+@@ -74,3 +76,5 @@
+ 
+ endif #End of Check for target
+ endif #End of Check for qssi target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/aps/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/aps/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_AUTO),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ 
+@@ -33,3 +35,5 @@
+ endif #End of check for target
+ endif #End of Check for qssi target
+ endif #End of check for AUTO Target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/offload/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/offload/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_AUTO),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ 
+@@ -38,3 +40,5 @@
+ endif #End of check for target
+ endif #End of Check for qssi target
+ endif #End of check for AUTO Target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/perf/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/perf/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_AUTO),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ 
+@@ -51,3 +53,5 @@
+ endif #End of check for target
+ endif #End of Check for qssi target
+ endif #End of check for AUTO Target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/perf_tether/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/perf_tether/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_AUTO),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ 
+@@ -39,3 +41,5 @@
+ endif #End of check for target
+ endif #End of Check for qssi target
+ endif #End of check for AUTO Target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/sch/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/sch/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_AUTO),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ 
+@@ -21,3 +23,5 @@
+ endif #End of check for target
+ endif #End of Check for qssi target
+ endif #End of check for AUTO Target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/shs/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/shs/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ RMNET_SHS_DLKM_PLATFORMS_LIST := lahaina
+ RMNET_SHS_DLKM_PLATFORMS_LIST += taro
+@@ -39,3 +41,5 @@
+ 
+ endif #End of Check for target
+ endif #End of Check for qssi target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet-ext/wlan/Android.mk
++++ b/vendor/qcom/opensource/datarmnet-ext/wlan/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_AUTO),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ 
+@@ -42,3 +44,5 @@
+ endif #End of check for target
+ endif #End of Check for qssi target
+ endif #End of check for AUTO Target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/datarmnet/core/Android.mk
++++ b/vendor/qcom/opensource/datarmnet/core/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_PLATFORM),qssi)
+ RMNET_CORE_DLKM_PLATFORMS_LIST := lahaina
+ RMNET_CORE_DLKM_PLATFORMS_LIST += taro
+@@ -36,3 +38,5 @@
+ 
+ endif #End of Check for target
+ endif #End of Check for qssi target
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/display-drivers/Android.mk
++++ b/vendor/qcom/opensource/display-drivers/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android makefile for display kernel modules
+ DISPLAY_DLKM_ENABLE := true
+ ifeq ($(TARGET_KERNEL_DLKM_DISABLE), true)
+@@ -10,3 +12,5 @@
+ 	LOCAL_PATH := $(call my-dir)
+ 	include $(LOCAL_PATH)/msm/Android.mk
+ endif
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/eva-kernel/Android.mk
++++ b/vendor/qcom/opensource/eva-kernel/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifneq ($(TARGET_BOARD_PLATFORM), qssi)
+ ifeq ($(call is-board-platform-in-list, $(TARGET_BOARD_PLATFORM)),true)
+ 
+@@ -32,3 +34,5 @@
+ 
+ endif # End of check for board platform
+ endif # End of check for target product
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/graphics-kernel/Android.mk
++++ b/vendor/qcom/opensource/graphics-kernel/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ ifeq ($(TARGET_USES_QMAA),true)
+ 	KGSL_ENABLED := false
+ 	ifeq ($(TARGET_USES_QMAA_OVERRIDE_GFX),true)
+@@ -37,3 +39,5 @@
+ 
+ endif # DLKM check
+ endif # KGSL_ENABLED
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/mm-drivers/Android.mk
++++ b/vendor/qcom/opensource/mm-drivers/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ MM_DRIVER_PATH := $(call my-dir)
+ 
+ MM_DRV_DLKM_ENABLE := true
+@@ -14,3 +16,5 @@
+ 		include $(MM_DRIVER_PATH)/sync_fence/Android.mk
+ 	endif
+ endif
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/mmrm-driver/Android.mk
++++ b/vendor/qcom/opensource/mmrm-driver/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ TARGET_MMRM_ENABLE := false
+ ifeq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ 	ifeq ($(TARGET_KERNEL_DLKM_MMRM_OVERRIDE),true)
+@@ -72,3 +74,5 @@
+ 	include $(DLKM_DIR)/Build_external_kernelmodule.mk
+ endif
+ endif
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/securemsm-kernel/Android.mk
++++ b/vendor/qcom/opensource/securemsm-kernel/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android makefile for securemsm kernel modules
+ 
+ ENABLE_SECUREMSM_DLKM := false
+@@ -135,3 +137,5 @@
+ ###################################################
+ ###################################################
+ endif #COMPILE_SECUREMSM_DLKM check
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/touch-drivers/Android.mk
++++ b/vendor/qcom/opensource/touch-drivers/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android makefile for display kernel modules
+ 
+ TOUCH_DLKM_ENABLE := true
+@@ -530,3 +532,5 @@
+ endif #kona
+        endif # DLKM check
+ endif
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/video-driver/Android.mk
++++ b/vendor/qcom/opensource/video-driver/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # SPDX-License-Identifier: GPL-2.0-only
+ TARGET_VIDC_ENABLE := false
+ ifeq ($(TARGET_KERNEL_DLKM_DISABLE), true)
+@@ -46,3 +48,5 @@
+ # BOARD_VENDOR_KERNEL_MODULES += $(LOCAL_MODULE_PATH)/$(LOCAL_MODULE)
+ include $(DLKM_DIR)/Build_external_kernelmodule.mk
+ endif
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/wlan/platform/Android.mk
++++ b/vendor/qcom/opensource/wlan/platform/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android Makefile for WLAN platform modules
+ 
+ ENABLE_WLAN_PLATFORM_DLKM := false
+@@ -133,3 +135,5 @@
+ LOCAL_MODULE_PATH         := $(KERNEL_MODULES_OUT)
+ include $(DLKM_DIR)/Build_external_kernelmodule.mk
+ endif #ENABLE_WLAN_PLATFORM_DLKM
++
++endif # SHENG_PREBUILT_KERNEL_GUARD
+--- a/vendor/qcom/opensource/wlan/qcacld-3.0/Android.mk
++++ b/vendor/qcom/opensource/wlan/qcacld-3.0/Android.mk
+@@ -1,3 +1,5 @@
++# SHENG_PREBUILT_KERNEL_GUARD: retain headers, skip source DLKM for prebuilt kernels.
++ifneq ($(TARGET_KERNEL_DLKM_DISABLE),true)
+ # Android makefile for the WLAN Module
+ 
+ # set WLAN_BUILD_DEBUG=y in your environment to enable debug logging
+@@ -261,3 +263,5 @@
+ endif # supported target check
+ endif # WLAN enabled check
+ endif # ENABLE_QCACLD
++
++endif # SHENG_PREBUILT_KERNEL_GUARD

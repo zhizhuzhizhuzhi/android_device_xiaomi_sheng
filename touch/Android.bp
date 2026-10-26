@@ -1,0 +1,73 @@
+cc_binary {
+    name: "sheng-touch-report",
+    stem: "touch_report",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["touch_report.c"],
+    shared_libs: ["libdl"],
+    required: ["libtouchreport"],
+    init_rc: ["touch_report.rc"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libtouchreport",
+    owner: "xiaomi",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: [
+        "libtouchreport.so"
+    ],
+    shared_libs: [
+        "libtouchsensor",
+        "libtensorflowlite_touch_c",
+        "libdl",
+        "liblog",
+        "libc",
+        "libm"
+    ],
+    strip: {
+        none: true
+    },
+    prefer: true
+}
+
+cc_prebuilt_library_shared {
+    name: "libtouchsensor",
+    owner: "xiaomi",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: [
+        "libtouchsensor.so"
+    ],
+    shared_libs: [
+        "libtensorflowlite_touch_c",
+        "libdl",
+        "liblog",
+        "libc",
+        "libm"
+    ],
+    strip: {
+        none: true
+    },
+    prefer: true
+}
+
+cc_prebuilt_library_shared {
+    name: "libtensorflowlite_touch_c",
+    owner: "xiaomi",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: [
+        "libtensorflowlite_touch_c.so"
+    ],
+    shared_libs: [
+        "libm",
+        "liblog",
+        "libdl",
+        "libc"
+    ],
+    strip: {
+        none: true
+    },
+    prefer: true
+}

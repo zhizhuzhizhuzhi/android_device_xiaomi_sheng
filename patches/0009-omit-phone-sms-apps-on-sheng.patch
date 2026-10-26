@@ -1,0 +1,21 @@
+--- a/vendor/google/gms/gms-vendor.mk
++++ b/vendor/google/gms/gms-vendor.mk
+@@ -122,10 +122,10 @@
+     FilesGoogle \
+     GWP \
+     AndroidPlatformServices \
+-    GoogleDialer \
++    $(if $(filter aospa_sheng,$(TARGET_PRODUCT)),,GoogleDialer) \
+     GooglePartnerSetup \
+     GoogleRestore \
+-    Messages \
++    $(if $(filter aospa_sheng,$(TARGET_PRODUCT)),,Messages) \
+     PersonalSafety \
+     Phonesky \
+     Turbo \
+@@ -135,4 +135,4 @@
+     GoogleFeedback \
+     GoogleServicesFramework \
+     SetupWizard \
+-    com.google.android.dialer.support
++    $(if $(filter aospa_sheng,$(TARGET_PRODUCT)),,com.google.android.dialer.support)

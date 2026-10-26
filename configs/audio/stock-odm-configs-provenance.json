@@ -1,0 +1,37 @@
+[
+  {
+    "source": "work/stock-dump/odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml",
+    "installed": "odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml",
+    "sha1": "8593010be4d0e511714cae4a5e219d607c760e44",
+    "sha256": "1535aedfff5a344939e2b676cd735be2eea44a6a8ac2f5e6eef5aa32e88aacfc",
+    "bytes": 66845
+  },
+  {
+    "source": "work/stock-dump/odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml",
+    "installed": "odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml",
+    "sha1": "0c0ff1d3aace49218d91c13b28601dce0b26e13f",
+    "sha256": "e674891e7dd4bde5195620528445c36c8b0fb69daedf6a8069ed94c7c9484e03",
+    "bytes": 2391
+  },
+  {
+    "source": "work/stock-dump/odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml",
+    "installed": "odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml",
+    "sha1": "f523f8c6018274110475dd32c2eb4cd3a1466d3c",
+    "sha256": "a663f9ae572ded046b5eb0da15273e110f6c1bfd7a4fc9c4b8572a169b999409",
+    "bytes": 30823
+  },
+  {
+    "source": "work/stock-dump/odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml",
+    "installed": "odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml",
+    "sha1": "7cd0f88a35e402dbd8b41f2eccd912c73d1fe5b3",
+    "sha256": "dabb48abf7841ad511881195a334496bbe406451b61636e8ff652a70d12ce83f",
+    "bytes": 114803
+  },
+  {
+    "source": "work/stock-dump/odm/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml",
+    "installed": "odm/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml",
+    "sha1": "657b0459ff306e769e988f9ebc5366c4b5c48e3f",
+    "sha256": "a062d1fabcd89a83f08aa69a9e0c3ea434a52ff233c0bad61abbf23f09f5d820",
+    "bytes": 43292
+  }
+]

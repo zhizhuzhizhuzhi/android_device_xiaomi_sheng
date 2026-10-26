@@ -1,0 +1,300 @@
+{
+  "reason": "Validated on physical Sheng: source/stock mixed stack failed before DRM commit; matched stock stack produces scanout",
+  "files": [
+    {
+      "source": "work/stock-dump/vendor/bin/hw/vendor.qti.hardware.display.composer-service",
+      "destination": "device/xiaomi/sheng/prebuilts/display/bin/hw/vendor.qti.hardware.display.composer-service",
+      "sha256": "f3fb0a372d27255c2145362f916dd4dd7a01cf64ffe3b524d630ac071b7df827",
+      "needed": [
+        "libhidltransport",
+        "vendor.xiaomi.hardware.displayfeature@1.0",
+        "libclient2slpi.notifier",
+        "libbinder",
+        "libhardware",
+        "libhistogram",
+        "libutils",
+        "libcutils",
+        "libsync",
+        "libhidlbase",
+        "liblog",
+        "libfmq",
+        "libhardware_legacy",
+        "libsdmcore",
+        "libqservice",
+        "libdisplaydebug",
+        "libsdmutils",
+        "libui",
+        "libgpu_tonemapper",
+        "libEGL",
+        "libGLESv2",
+        "libGLESv3",
+        "vendor.qti.hardware.display.composer@3.0",
+        "vendor.qti.hardware.display.composer@3.1",
+        "android.hardware.graphics.composer@2.1",
+        "android.hardware.graphics.composer@2.2",
+        "android.hardware.graphics.composer@2.3",
+        "android.hardware.graphics.composer@2.4",
+        "android.hardware.graphics.mapper@4.0",
+        "android.hardware.graphics.allocator@4.0",
+        "vendor.qti.hardware.display.mapper@4.0",
+        "libgralloc.qti",
+        "libgralloctypes",
+        "libdisplayconfig.qti",
+        "libdrm",
+        "libbinder_ndk",
+        "android.hardware.common-V2-ndk",
+        "vendor.qti.hardware.display.config-V4-ndk",
+        "vendor.qti.hardware.display.demura@2.0",
+        "vendor.qti.hardware.display.mapperextensions@1.1",
+        "vendor.qti.hardware.display.mapperextensions@1.2",
+        "vendor.qti.hardware.display.mapperextensions@1.3",
+        "libgrallocutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libsdmcore.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libsdmcore.so",
+      "sha256": "f5896129ee702c5a18f2057cee888efd3306cfa833231c3d34033620d6689947",
+      "needed": [
+        "libhidltransport",
+        "libhidlbase",
+        "vendor.xiaomi.hardware.displayfeature@1.0",
+        "libclient2slpi.notifier",
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libdisplaydebug",
+        "libsdmutils",
+        "libdrm",
+        "libdrmutils",
+        "libsdedrm",
+        "libsdmdal",
+        "libbinder",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libqservice.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libqservice.so",
+      "sha256": "6bf11b7ea08aa0669072ba45c81c57adf20264ef745487956aab13723fe8b301",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libdisplaydebug.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libdisplaydebug.so",
+      "sha256": "aa71387f4ea105827b279b635ef892d0d4db75f95db56bdbc64cafc0acb656ef",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libsdmutils.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libsdmutils.so",
+      "sha256": "27b3eded9c2a1ee5ffd2eddcd0e58ac5c773eac97ccace4b6a977176dbce9f00",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libdisplaydebug",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libgpu_tonemapper.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libgpu_tonemapper.so",
+      "sha256": "95db386cb7bea127f0fe18b9378f6e6aa513e1aff39064ea55de9145dd2a073c",
+      "needed": [
+        "libcutils",
+        "libEGL",
+        "libGLESv2",
+        "libGLESv3",
+        "libgrallocutils",
+        "libhidlbase",
+        "libui",
+        "libutils",
+        "liblog",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libhistogram.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libhistogram.so",
+      "sha256": "c7fb883544989d090c577b464a7cd95a70074041050a77d75216217924c65e30",
+      "needed": [
+        "libdrm",
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbase",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libdisplayconfig.qti.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libdisplayconfig.qti.so",
+      "sha256": "6e99239b784728e3c4435a78e69b5ca7254ee02658ca4e6f450cbfe581e69272",
+      "needed": [
+        "liblog",
+        "libhidlbase",
+        "libutils",
+        "vendor.display.config@2.0",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libgralloc.qti.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libgralloc.qti.so",
+      "sha256": "05a84b1c442bfe767f7f4c0980713c22f5e68a4f31a76991e0939b2337f41d65",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libgralloctypes",
+        "libhidlbase",
+        "libhardware",
+        "android.hardware.graphics.mapper@4.0",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libgrallocutils.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libgrallocutils.so",
+      "sha256": "8ff95be50022ce2b2ca1b5b30689e35f3399285a074dac0c6acb97fde296a7b8",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libgralloctypes",
+        "libhidlbase",
+        "android.hardware.graphics.common@1.2",
+        "android.hardware.graphics.mapper@2.0",
+        "android.hardware.graphics.mapper@2.1",
+        "android.hardware.graphics.mapper@3.0",
+        "android.hardware.graphics.mapper@4.0",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libdrm.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libdrm.so",
+      "sha256": "2d57706fd4699c0aa4504313a3920ce7ac756aa327caab1e7962bf51018202f7",
+      "needed": [
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libdrmutils.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libdrmutils.so",
+      "sha256": "7f640e2db28482324cb73447bc23bb74e785a7cf669ae9128f8483af15178503",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libdrm",
+        "libdisplaydebug",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libsdedrm.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libsdedrm.so",
+      "sha256": "9d7475ff2615726268a189f7703cc8702f47b1f103f81878a1e0de4960a21b24",
+      "needed": [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libdrm",
+        "libdrmutils",
+        "libdisplaydebug",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/libsdmdal.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/libsdmdal.so",
+      "sha256": "bf509c5f550abfa3e5bd981d4d6a1a1322057c4e8e76b55f394e6ac43b755263",
+      "needed": [
+        "libhidltransport",
+        "libhidlbase",
+        "vendor.xiaomi.hardware.displayfeature@1.0",
+        "libclient2slpi.notifier",
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libdisplaydebug",
+        "libsdmutils",
+        "libdrm",
+        "libdrmutils",
+        "libsdedrm",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    },
+    {
+      "source": "work/stock-dump/vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so",
+      "destination": "device/xiaomi/sheng/prebuilts/display/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so",
+      "sha256": "751b5894d7882b9aba04ee4b9429426bee4e89be1ecc89abc11f143fd75d1ccc",
+      "needed": [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl"
+      ]
+    }
+  ]
+}
