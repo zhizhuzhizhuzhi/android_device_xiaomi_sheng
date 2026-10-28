@@ -54,4 +54,16 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
+# Use the build system's product-level Android.mk selection for prebuilt DLKM.
+PRODUCT_IGNORE_ALL_ANDROIDMK := true
+PRODUCT_ANDROIDMK_ALLOWLIST_FILE := device/xiaomi/sheng/build/androidmk_allowlist.mk
+
+# Kernel sources are used only by the separately built keyboard module.
+# Fuxi vendor/camera projects are not part of this tablet product.
+PRODUCT_SOURCE_ROOT_DIRS += \
+    -kernel_platform \
+    -vendor/xiaomi/fuxi \
+    -vendor/xiaomi/sm8550-common \
+    -vendor/xiaomi/camera
+
 endif
