@@ -46,8 +46,11 @@ bash build-device.sh sheng user -j8 target-files-package
 
 The helpers select `aospa_sheng`, `cp2a` and the requested variant directly.
 They do not run repository synchronization or download proprietary inputs.
-The historical patches under `patches/` document bring-up; use the pinned
-integration delta rather than applying both patch collections.
+Source preparation is owned by `vendor/xiaomi/sm8550-integration`; run
+`python3 vendor/xiaomi/sm8550-integration/tools/prepare-source.py --tree "$PWD" --device sheng`
+after extraction. The obsolete device-local build wrapper and bring-up patch
+collection were removed; their history remains in Git. Use only the shared
+`build-device.sh` entry shown above.
 
 ## License
 
