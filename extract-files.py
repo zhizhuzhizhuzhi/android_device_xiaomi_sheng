@@ -112,3 +112,7 @@ if __name__ == '__main__':
         module, 'sm8550-sheng-common', module.vendor
     )
     utils.run()
+    # Keep extraction-generated metadata aligned with the checked-in product.
+    import subprocess
+    from pathlib import Path
+    subprocess.run([sys.executable, str(Path(__file__).parent / 'tools/write-vendor-config.py')], check=True)
