@@ -10,7 +10,7 @@ tree=device.parents[2]
 rows=json.loads((device/'build/vendor-config.json').read_text())['files']
 actions=[]
 for row in rows:
-    source=device/'build/vendor-config'/row['path']
+    source=device/'build/vendor-config'/row['template']
     target=(tree/row['path']).resolve()
     if not target.is_relative_to(tree/'vendor/xiaomi'):
         raise ValueError('Invalid vendor target')
