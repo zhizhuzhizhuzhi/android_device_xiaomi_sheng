@@ -20,5 +20,6 @@ for row in rows:
     actions.append((target,data))
 for target,data in actions:
     target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_bytes(data)
+    if not target.is_file() or target.read_bytes()!=data:
+        target.write_bytes(data)
 print('Wrote',len(actions),'reviewed vendor metadata files')
