@@ -58,10 +58,16 @@ TARGET_BOOT_ANIMATION_RES := 1440
 PRODUCT_IGNORE_ALL_ANDROIDMK := true
 PRODUCT_ANDROIDMK_ALLOWLIST_FILE := device/xiaomi/sheng/build/androidmk_allowlist.mk
 
-# Kernel sources are used only by the separately built keyboard module.
+# Keep kernel header host tools; exclude duplicate standalone tool modules.
 # Fuxi vendor/camera projects are not part of this tablet product.
 PRODUCT_SOURCE_ROOT_DIRS += \
-    -kernel_platform \
+    -kernel_platform/external/dtc \
+    -kernel_platform/prebuilts/asuite \
+    -kernel_platform/prebuilts/build-tools \
+    -kernel_platform/prebuilts/clang/host/linux-x86 \
+    -kernel_platform/prebuilts/ndk-r23 \
+    -kernel_platform/prebuilts/tradefed \
+    -kernel_platform/tools/mkbootimg \
     -vendor/xiaomi/fuxi \
     -vendor/xiaomi/sm8550-common \
     -vendor/xiaomi/camera

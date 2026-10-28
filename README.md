@@ -63,9 +63,9 @@ or Android's normal defaults.
 
 Sheng uses Android's `PRODUCT_ANDROIDMK_ALLOWLIST_FILE` to omit source DLKM make
 rules while keeping UAPI/header Android.bp modules. It does not require a fork of
-each kernel module merely to add a prebuilt-kernel guard. `kernel_platform` is
-excluded from the ROM module graph but retained as source/tooling for the separate
-Caps Lock build. Fuxi vendor and MiuiCamera projects are excluded from this product.
+each kernel module merely to add a prebuilt-kernel guard. Kernel header host tools remain in the ROM graph; duplicate standalone kernel
+tool checkouts are excluded. The separately built Caps Lock module uses the
+matched GKI source and toolchain. Fuxi vendor and MiuiCamera projects are excluded from this product.
 
 ## Validation and license
 
